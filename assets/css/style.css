@@ -3,12 +3,16 @@
 * {
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  color: #fafafa;
 }
 
 body {
   margin: 0px;
-  color: #fafafa;
   background-color: #12141D;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* ---------------------------------------------------------------- General styling: */
@@ -32,7 +36,6 @@ header {
 .nav {
   height: auto;
   width: 90%;
-  background-color: #1e2028;
   position: relative;
   display: flex;
   align-items: center;
@@ -41,20 +44,14 @@ header {
   border-radius: 10px;
 }
 
+.home-link {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fafafa;
+}
+
 .nav > .nav-header {
   display: inline;
-}
-
-.home-link {
-    padding: 13px 10px;
-    font-size: 18px;
-    text-decoration: none;
-    color: #fafafa;
-    transition: 0.2s;
-}
-
-.home-link:hover {
-    color: #FF705B;
 }
 
 .nav > .nav-btn {
@@ -75,7 +72,7 @@ header {
 }
 
 .nav > .nav-links > a:hover {
-  color: #FF705B;
+  color: darkorange;
 }
 
 .nav > #nav-check {
@@ -90,11 +87,25 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 /* ---------------------------------------------------------------- Hero-Section: */
 
+.hero-section {
+    background: rgba(0, 0, 0, 0.7) url("../images/pexels-aleksandar-pasaric-2603464.jpg") no-repeat center center / cover;
+    background-blend-mode: darken;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.hero-span {
+    color: darkorange;
+}
 
 /* ---------------------------------------------------------------- Mediaquery: */
 
