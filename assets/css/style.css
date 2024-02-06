@@ -13,14 +13,6 @@ body {
 
 /* ---------------------------------------------------------------- General styling: */
 
-.container {
-  width: 90%;
-  margin: 0px 0px 100px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 span {
   color: #A6A6A6;
 }
@@ -40,7 +32,7 @@ header {
 .nav {
   height: auto;
   width: 90%;
-  background-color: #fafafa;
+  background-color: #1e2028;
   position: relative;
   display: flex;
   align-items: center;
@@ -56,6 +48,13 @@ header {
 .home-link {
     padding: 13px 10px;
     font-size: 18px;
+    text-decoration: none;
+    color: #fafafa;
+    transition: 0.2s;
+}
+
+.home-link:hover {
+    color: #FF705B;
 }
 
 .nav > .nav-btn {
@@ -71,7 +70,8 @@ header {
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #12141D;
+  color: #fafafa;
+  transition: 0.2s;
 }
 
 .nav > .nav-links > a:hover {
@@ -91,6 +91,10 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+/* ---------------------------------------------------------------- Hero-Section: */
+
+
 
 /* ---------------------------------------------------------------- Mediaquery: */
 
