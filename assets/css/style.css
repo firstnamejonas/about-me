@@ -45,9 +45,7 @@ header {
 }
 
 .home-link {
-    text-decoration: none;
-    font-size: 18px;
-    color: #fafafa;
+    max-width: 50px;
 }
 
 .nav > .nav-header {
@@ -106,6 +104,31 @@ main {
 .hero-span {
     color: darkorange;
 }
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 252px;
+}
+
+.link {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border: 1px solid darkorange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.link:hover {
+  background-color: darkorange;
+}
+
 
 /* ---------------------------------------------------------------- Mediaquery: */
 
