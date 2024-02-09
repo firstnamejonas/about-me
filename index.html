@@ -240,31 +240,31 @@
   <section class="contact" id="contact">
     <h2 id="h2-responsive" class="heading">Kontakt</h2>
 
-    <form action="#">
+    <form onsubmit="sendEmail(); reset(); return false;">
       <div class="input-box">
         <div class="input-field">
-          <input type="text" placeholder="Name" required>
+          <input type="text" placeholder="Name" id="name" required>
           <span class="focus"></span>
         </div>
         <div class="input-field">
-          <input type="email" placeholder="E-Mail" required>
+          <input type="email" placeholder="E-Mail" id="email" required>
           <span class="focus"></span>
         </div>
       </div>
 
       <div class="input-box">
         <div class="input-field">
-          <input type="number" placeholder="Telefonnummer" required>
+          <input type="tel" placeholder="Telefonnummer" id="phone" required>
           <span class="focus"></span>
         </div>
         <div class="input-field">
-          <input type="text" placeholder="Betreff" required>
+          <input type="text" placeholder="Betreff" id="subject" required>
           <span class="focus"></span>
         </div>
       </div>
 
       <div class="textarea-field">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Schreiben Sie mir hier gerne eine Nachricht...."></textarea>
+        <textarea name="" id="message" cols="30" rows="10" placeholder="Schreiben Sie mir hier gerne eine Nachricht...."></textarea>
         <span class="focus"></span>
       </div>
 
@@ -286,6 +286,8 @@
     </div>
   </section>
 
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/mail.js"></script>
 </body>
 </html>
