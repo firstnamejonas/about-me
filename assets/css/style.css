@@ -623,7 +623,7 @@ section {
   }
 }
 
-@media (max-width: 371px) {
+@media (max-width: 449px) {
   .home {
     justify-content: center;
   }
@@ -637,5 +637,43 @@ section {
 
   .home-content h1 {
     font-size: 5rem;
+    width: 95%;
+  }
+
+  .home-content p {
+    width: 95%;
+  }
+
+  .home-content .btn-box {
+    width: 95%;
+    margin-bottom: 50px;
+  }
+
+  .home-content .text-animate {
+    width: 95%;
+  }
+
+  #h2-responsive {
+    font-size: 30px;
+  }
+
+  #h3-responsive {
+    font-size: 25px;
+  }
+  
+  #h4-responsive {
+    font-size: 20px;
+  }
+
+  #h5-responsive {
+    font-size: 15px;
+  }
+
+  #h6-responsive {
+    font-size: 10px;
+  }
+
+  #p-responsive {
+    font-size: 8px;
   }
 }
