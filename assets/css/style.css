@@ -387,12 +387,12 @@ section {
   padding: 1rem 0;
 }
 
-.skills-content .progress h4 {
+.skills-content .progress h3 {
   display: flex;
   justify-content: space-between;
 }
 
-.skills-content .progress h4 span {
+.skills-content .progress h3 span {
   color: var(--text-color);
 }
 
