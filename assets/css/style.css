@@ -32,47 +32,63 @@ body {
 
 /*--------------------------------------------------------------------------------------------------------------- Header: */
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem 9%;
+header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  z-index: 100;
-  background: var(--bg-color);
+  width: 100%;
+  position: fixed;
+  z-index: 99;
 }
 
-.logo {
+.nav {
+  height: auto;
+  width: 100%;
+  background-color: var(--bg-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 9% 2rem;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+#home-link {
   font-size: 2.5rem;
-  color: var(--text-color);
-  font-weight: 600;
+  text-decoration: none;
+  color: #fafafa;
   transition: .3s;
 }
 
-.logo:hover {
+#home-link:hover {
+  color: #5E17EB;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 0px 13px 10px;
+  text-decoration: none;
+  color: #fafafa;
+  transition: .3s;
+}
+
+.nav > .nav-links > a:hover {
   color: var(--main-color);
 }
 
-.navbar a {
-  font-size: 1.7rem;
-  color: var(--text-color);
-  font-weight: 500;
-  margin-left: 3.5rem;
-  transition: 0.3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: var(--main-color);
-}
-
-#menu-icon {
-  font-size: 3.6rem;
-  color: var(--text-color);
-  cursor: pointer;
+.nav > #nav-check {
   display: none;
 }
 
@@ -605,10 +621,6 @@ section {
 }
 
 @media (max-width: 991px) {
-  
-  .header {
-    padding: 2rem 4%;
-  }
 
   section {
     padding: 10rem 4% 2rem;
@@ -629,39 +641,6 @@ section {
 }
 
 @media (max-width: 768px) {
-
-  .header {
-    background: var(--bg-color);
-  }
-
-  #menu-icon {
-    display: block;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: -100%;
-    width: 100%;
-    padding: 1rem 4%;
-    background: var(--bg-color);
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-    transition: .25s ease;
-    transition-delay: .25s;
-    overflow-x: hidden;
-  }
-
-  .navbar.active {
-    left: 0;
-    transition-delay: 0s;
-    overflow-x: hidden;
-  }
-
-  .navbar a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-  }
 
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
@@ -770,6 +749,47 @@ section {
 
   #p-responsive {
     font-size: 12px;
+  }
+}
+
+@media (max-width:844px) {
+  .nav > .nav-btn {
+    display: inline-block;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px 0px 13px 13px;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 80%;
+    height: 10px;
+    border-top: 2px solid #efefef;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: var(--bg-color);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 80px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
   }
 }
 
