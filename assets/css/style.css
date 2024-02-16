@@ -405,11 +405,12 @@ section {
 
 .skills-content .progress h3 {
   display: flex;
+  font-size: 1.8rem;
   justify-content: space-between;
 }
 
 .skills-content .progress h3 span {
-  color: var(--text-color);
+  color: var(--main-color);
 }
 
 .skills-content .progress .bar {
@@ -732,11 +733,11 @@ section {
   }
 
   #h3-responsive {
-    font-size: 25px;
+    font-size: 20px;
   }
   
   #h4-responsive {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   #h5-responsive {
